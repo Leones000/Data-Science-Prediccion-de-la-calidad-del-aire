@@ -38,7 +38,7 @@ print(arithmetic.mean(v[[1]]))
 ```
 
 Hora1=0.2616018 | Hora2=0.2470172 | Hora3=0.2474075 | Hora4=0.2226969 | Hora5=0.2266908 | Hora6=0.2702171
---- | --- | --- | --- | --- |
-Hora7=0.3691449 | Hora8=0.6164668 | Hora9=0.675253 | Hora10= | Hora11= | Hora12= 
-Hora13=0.2849705 | Hora14=0.2575102 | Hora15=0.258061 | Hora16= | Hora17= | Hora18=
-Hora19= | Hora20=0.3932199 | Hora21=0.4444491 | Hora22=0.4394486 | Hora23= | Hora24=
+--- | --- | --- | --- | --- | ---
+Hora7=0.3691449 | Hora8=0.6164668 | Hora9=0.675253 | Hora10=x | Hora11=x | Hora12=x 
+Hora13=0.2849705 | Hora14=0.2575102 | Hora15=0.258061 | Hora16=x | Hora17=x | Hora18=x
+Hora19=x | Hora20=0.3932199 | Hora21=0.4444491 | Hora22=0.4394486 | Hora23=x | Hora24=x
