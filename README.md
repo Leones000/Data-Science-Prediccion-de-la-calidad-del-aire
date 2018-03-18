@@ -105,6 +105,60 @@ Gráfica del componente SO2 en la hora 15, desde 1996 hasta 2011:
 Gráfica del componente SO2 en la hora 21, desde 1996 hasta 2011:
 ![so21](https://user-images.githubusercontent.com/26826159/37568261-43bea81c-2a98-11e8-9e50-42271d7359b9.jpg)
 
+#Modelo predictivo lineal
+´´´R
+library(readr)
+CSV <- read_csv("/Users/francoarielramirezvilla/Desktop/R/alldata.csv")
+
+aux <-   subset(CSV,  (PARAMETRO=="NOX" & CLAVE_EST == "AGU") & HORA01!="NA", select = c("HORA21"))
+
+limpiar <- function(aux){
+  v1 <- aux[1]
+  var<-c()
+  for (i in 1:length(v1[[1]])) {
+    if(v1[[1]]>0){
+      var<-append(var,v1[[1]][i])
+    }
+  }
+  var<-sort(var)
+  mediana <- median(unlist(var))
+  m <- mad(unlist(var))
+  l_i <- mediana - m
+  l_f <- mediana + m
+  res <- c()
+  
+  for (i in 1:length(var)) {
+    if(var[i]>=l_i & var[i]<=l_f){
+      res<-append(res,var[i])
+    }
+  }
+  return(res)
+}
+res<-limpiar(aux)
+
+arithmetic.mean <- function(a) {(sum(a))/(length(a))}
+
+difs <- c()
+print(length(aux[[1]]))
+for (i in 1:aux[[1]]) {
+  append(difs,aux[[1]][i]-aux[[1]][i-1])
+  i=i+100
+}
+
+promedio<-arithmetic.mean(difs)
+
+vecP <- c(0:12)
+
+for (i in range(1,12)) {
+  vecP[i]<-difs[length(difs)-1]+promedio
+  append(difs,vecP[i])
+}
+
+plot(vecP)
+´´´
+![acf45d20-c023-4877-ac2b-d62f118c52e7](https://user-images.githubusercontent.com/37254626/37568384-0eedfc58-2a9a-11e8-91f0-d376ff87a41f.jpg)
+
+
 ##CONCLUSIONES
 Este proyecto sucitó muchos retos, desde el aprendizaje de un nuevo lenguaje, el tratamiento de datos útiles y los parámetros que a éstos determinan, etc.
 Pudimoa notar que las ppm de los gases en el ambiente dependen de una gran cantidad de variables. El conflicto inicia cuando se debe decidir qué variables sí y cuáles no considerar., entrando en un duelo entre precisión y complejidad, ya que más variables (que sí tengan impacto en el modelo) pueden dar mejor detalle de la tendencia en el tiempo del sistema.
