@@ -163,7 +163,7 @@ plot(vecP)
 ![acf45d20-c023-4877-ac2b-d62f118c52e7](https://user-images.githubusercontent.com/37254626/37568384-0eedfc58-2a9a-11e8-91f0-d376ff87a41f.jpg)
 
 
-##CONCLUSIONES
+## CONCLUSIONES
 Este proyecto sucitó muchos retos, desde el aprendizaje de un nuevo lenguaje, el tratamiento de datos útiles y los parámetros que a éstos determinan, etc.
 Pudimoa notar que las ppm de los gases en el ambiente dependen de una gran cantidad de variables. El conflicto inicia cuando se debe decidir qué variables sí y cuáles no considerar., entrando en un duelo entre precisión y complejidad, ya que más variables (que sí tengan impacto en el modelo) pueden dar mejor detalle de la tendencia en el tiempo del sistema.
 Ser capaces de mostrar la data de forma optimizada y visualmente útil es ya una herramienta adquirida para próximas investigaciones y reportes.
