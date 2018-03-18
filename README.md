@@ -47,7 +47,7 @@ Hora13=0.2849705 | Hora14=0.2575102 | Hora15=0.258061 | Hora16=x | Hora17=x | Ho
 Hora19=x | Hora20=0.3932199 | Hora21=0.4444491 | Hora22=0.4394486 | Hora23=x | Hora24=x
 
 
-##ÁNALISIS DE DATOS
+## ÁNALISIS DE DATOS
 Unz vez obtenidos los promedio anteriores, determinamos que entre las 24 horas del día donde se registraron datos, habían 3 horas que tenían mayor saturación de componentes químicos contaminantes, dichas horas fueron las 9 am, 3 pm y 9 pm. En base a éstas 3 horas más significativas, graficamos la cantidad de partículas contaminantes en promedio por cada año, y generamos 4 graficas en base a un componente químico específico; para esto, determinamos los componenetes químicos con mayor influencia en la calidad del aire en base a una búsqueda de información, por lo que nuestros compuestos químicos son el CO, No2, So2 y el NoX.
 Utilizamos el siguiente código en R para generar nuestras gráficas:
 
@@ -68,7 +68,7 @@ title(xlab="Year", col.lab=rgb(0,0.5,0))
 title(ylab="Sensors", col.lab=rgb(0,0.5,0))
 legend(1, 1000, c("AGU","ATM","CEN","LDO","MIR","OBL","TLA","VAL"), cex=0.8, col=c("blue","red","orange","black","green","gray","brown","pink"), pch=21:22, lty=1:2)
 ```
-##GRAFICAS
+## GRAFICAS
 Gráfica del componente CO en la hora 9, desde 1996 hasta 2011:
 ![co9](https://user-images.githubusercontent.com/26826159/37568149-dc2e3858-2a96-11e8-9298-38c4419c7a4e.jpg)
 
@@ -105,9 +105,9 @@ Gráfica del componente SO2 en la hora 15, desde 1996 hasta 2011:
 Gráfica del componente SO2 en la hora 21, desde 1996 hasta 2011:
 ![so21](https://user-images.githubusercontent.com/26826159/37568261-43bea81c-2a98-11e8-9e50-42271d7359b9.jpg)
 
-#Modelo predictivo lineal
+## Modelo predictivo lineal
 
-´´´R
+```R
 
 library(readr)
 CSV <- read_csv("/Users/francoarielramirezvilla/Desktop/R/alldata.csv")
@@ -158,7 +158,8 @@ for (i in range(1,12)) {
 
 plot(vecP)
 
-´´´
+```
+
 ![acf45d20-c023-4877-ac2b-d62f118c52e7](https://user-images.githubusercontent.com/37254626/37568384-0eedfc58-2a9a-11e8-91f0-d376ff87a41f.jpg)
 
 
