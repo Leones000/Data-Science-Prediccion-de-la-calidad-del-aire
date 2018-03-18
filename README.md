@@ -106,6 +106,7 @@ Gráfica del componente SO2 en la hora 21, desde 1996 hasta 2011:
 ![so21](https://user-images.githubusercontent.com/26826159/37568261-43bea81c-2a98-11e8-9e50-42271d7359b9.jpg)
 
 #Modelo predictivo lineal
+
 ´´´R
 library(readr)
 CSV <- read_csv("/Users/francoarielramirezvilla/Desktop/R/alldata.csv")
