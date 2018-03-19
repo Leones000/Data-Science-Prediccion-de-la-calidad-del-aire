@@ -14,7 +14,7 @@ Diego Gustavo Ramirez Guerrero
 ## Introduccion
 No es una noticia nueva que la contaminación existe, que está en aumento y que se le debe dar una solución a la brevedad. Diferentes gases están presentes todos los días en el aire que respiramos, tales como monóxido y dioxido de carbono, monóxido de nitrógeno, dioxido de azufre, metano, entre otros. No obstante, el efecto que causa en las personas el escuchar "el SO2 del aire aumentó en x% este año" no es más que uno de aceptación y resignación; nos acostumbramos a que la tendencia sea de mal en peor y ésto nos nubla a no darnos cuenta de que sí, la cosa va mal y si no hacemos algo pronto, no lo podremos hacer después. Cuando nos dimos cuenta de la interpretación a las palabras de alerta, decidimos implementar otra metodología. ¿Y si la gente pudiera ver el aumento del que todos hablan, pero de forma gráfica? Lograr que lo dramático de la inclinación de la pendiente que anuncia el aumento a través de los años de alguno de los gases nocivos de una mejor explicación de lo mal que pinta la situación. Una buena visualización de los datos cuenta siempre la mejor de las historias. Con este lema en mente creamos el presente documento.
 
-##Lectura de datos
+## Lectura de datos
 Con ayuda del software R importamos los archivos que se nos facilitaron. Para ésta acción, decidimos cambiar el tipo de archivo a csv (dividido por comas), ya que el software se mostraba amigable con éste tipo de formato que se le enviaba. Además, creamos un nuevo archivo que agrupó toda la información en conjunto. De esta forma, pudimos tener todos los datos con los que contabamos en una sola variable.
 
 ## LIMPIEZA DE LOS DATOS
